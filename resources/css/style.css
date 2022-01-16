@@ -485,13 +485,43 @@ nav {
 ----------------------------------*/
 .categories {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1.5fr 1fr 1fr;
     grid-column-gap: 50px;
     grid-row-gap: 50px;
+    grid-template-areas:
+        " tv camera phone "
+        " tv computer audio"
+    ;
+}
+
+.tv {
+    grid-area: tv;
+}
+
+.camera {
+    grid-area: camera;
+}
+
+.phone {
+    grid-area: phone;
+}
+
+.computer {
+    grid-area: computer;
+}
+
+.audio {
+    grid-area: audio;
+}
+
+.tv-thumb {
+    padding-top: 200px;
+
 }
 
 .category-thumbnail figure img {
     width: 100%;
+    height: 300px;
 }
 
 .category-item {

@@ -1,219 +1,12 @@
 /* --------------------------------------
     responsive-device 
 ------------------------------------------*/
-@media only screen and (min-width: 769px) {
-    /* spacing */
 
-    /* padding-top */
-    .padding-top-120px {
-        padding-top: 120px;
-    }
-
-    .padding-top-110px {
-        padding-top: 110px;
-    }
-
-    .padding-top-100px {
-        padding-top: 100px;
-    }
-
-    .padding-top-90px {
-        padding-top: 90px;
-    }
-
-    .padding-top-80px {
-        padding-top: 80px;
-    }
-
-    .padding-top-70px {
-        padding-top: 70px;
-    }
-
-    .padding-top-60px {
-        padding-top: 60px;
-    }
-
-    .padding-top-50px {
-        padding-top: 50px;
-    }
-
-    .padding-top-40px {
-        padding-top: 40px;
-    }
-
-    .padding-top-30px {
-        padding-top: 30px;
-    }
-
-    .padding-top-20px {
-        padding-top: 20px;
-    }
-
-    .padding-top-10px {
-        padding-top: 10px;
-    }
-
-    .half-width {
-        max-width: 50%;
-    }
-
-    /* padding bottom */
-
-    .padding-bottom-120px {
-        padding-bottom: 120px;
-    }
-
-    .padding-bottom-110px {
-        padding-bottom: 110px;
-    }
-
-    .padding-bottom-100px {
-        padding-bottom: 100px;
-    }
-
-    .padding-bottom-90px {
-        padding-bottom: 90px;
-    }
-
-    .padding-bottom-80px {
-        padding-bottom: 80px;
-    }
-
-    .padding-bottom-70px {
-        padding-bottom: 70px;
-    }
-
-    .padding-bottom-60px {
-        padding-bottom: 60px;
-    }
-
-    .padding-bottom-50px {
-        padding-bottom: 50px;
-    }
-
-    .padding-bottom-40px {
-        padding-bottom: 40px;
-    }
-
-    .padding-bottom-30px {
-        padding-bottom: 30px;
-    }
-
-    .padding-bottom-20px {
-        padding-bottom: 20px;
-    }
-
-    .padding-bottom-10px {
-        padding-bottom: 10px;
-    }
-
-    /* padding left */
-
-    .padding-left-120px {
-        padding-left: 120px;
-    }
-
-    .padding-left-110px {
-        padding-left: 110px;
-    }
-
-    .padding-left-100px {
-        padding-left: 100px;
-    }
-
-    .padding-left-90px {
-        padding-left: 90px;
-    }
-
-    .padding-left-80px {
-        padding-left: 80px;
-    }
-
-    .padding-left-70px {
-        padding-left: 70px;
-    }
-
-    .padding-left-60px {
-        padding-left: 60px;
-    }
-
-    .padding-left-50px {
-        padding-left: 50px;
-    }
-
-    .padding-left-40px {
-        padding-left: 40px;
-    }
-
-    .padding-left-30px {
-        padding-left: 30px;
-    }
-
-    .padding-left-20px {
-        padding-left: 20px;
-    }
-
-    .padding-left-10px {
-        padding-left: 10px;
-    }
-
-    /* padding right */
-
-    .padding-right-120px {
-        padding-right: 120px;
-    }
-
-    .padding-right-110px {
-        padding-right: 110px;
-    }
-
-    .padding-right-100px {
-        padding-right: 100px;
-    }
-
-    .padding-right-90px {
-        padding-right: 90px;
-    }
-
-    .padding-right-80px {
-        padding-right: 80px;
-    }
-
-    .padding-right-70px {
-        padding-right: 70px;
-    }
-
-    .padding-right-60px {
-        padding-right: 60px;
-    }
-
-    .padding-right-50px {
-        padding-right: 50px;
-    }
-
-    .padding-right-40px {
-        padding-right: 40px;
-    }
-
-    .padding-right-30px {
-        padding-right: 30px;
-    }
-
-    .padding-right-20px {
-        padding-right: 20px;
-    }
-
-    .padding-right-10px {
-        padding-right: 10px;
-    }
-
-
-}
 
 /*-------------------------------------------
-     TABLET RESPONSIVE MEDIA QUERY  
+     TABLET DEVICE 
 -------------------------------------------*/
-@media only screen and (max-width: 769px) {
+@media only screen and (min-width: 689px) and (max-width: 991px) {
 
     /* nav */
     nav {
@@ -250,8 +43,20 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    /* categories */
     .categories {
-        grid-template-columns: repeat(2, 1fr);
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:
+            " tv tv  "
+            " camera phone"
+            " computer audio"
+        ;
+    }
+
+    .tv-thumb {
+        padding-top: 0;
+
     }
 
 }
@@ -259,9 +64,13 @@
 
 
 /*-------------------------------------------
-     MOBILE RESPONSIVE MEDIA QUERY  
+     MOBILE DEVICE 
 -------------------------------------------*/
-@media only screen and (min-width: 320px) and (max-width: 769px) {
+@media only screen and (max-width: 689px) {
+
+    .container {
+        margin: 0 50px;
+    }
 
     /* nav */
     nav {
@@ -308,8 +117,22 @@
         grid-template-columns: 1fr;
     }
 
+    /* categories */
     .categories {
+        display: grid;
         grid-template-columns: 1fr;
+        grid-template-areas:
+            " tv "
+            " camera"
+            " phone "
+            " computer "
+            "  audio"
+        ;
+    }
+
+    .tv-thumb {
+        padding-top: 0;
+
     }
 
 }
